@@ -1,0 +1,156 @@
+:root {
+
+	--primary: #1f1e1e;
+	--darkest: #1a1818;
+	--lightgrey: #9c9d9f;
+	--light: #EEE;
+	--red:#9c1d1d;
+	--accent-color:#ff6600;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: var(--lightgrey);
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: var(--darkest);
+	margin-bottom: 1rem;
+
+}
+
+#todo-form {
+	display: flex;;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#todo-input {
+	flex: 1 1 0%;
+	background-color: var(--darkest);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: var(--light);
+	font-size: 1.25rem;
+}
+
+#todo-input::placeholder {
+	color: var(--lightgrey);
+}
+
+#todo-submit {
+	color: var(--primary);
+	font-size: 1.25rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--accent-color), var(--red));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+#todo-submit:hover {
+	opacity: 0.8;
+}
+
+#todo-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.todo-list {
+	padding: 1rem;
+}
+
+.todo-list h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--primary);
+	margin-bottom: 1rem;
+}
+
+#todos .todo {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--darkest);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.todo .content {
+	flex: 1 1 0%;
+}
+
+.todo .content .text {
+	color: var(--lightgrey);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.todo .content .text:not(:read-only) {
+	color: var(--light);
+}
+
+.todo .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.todo .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.todo .actions button:hover {
+	opacity: 0.8;
+}
+
+.todo .actions button:active {
+	opacity: 0.6;
+}
+
+.todo .actions .update{
+	background-image: linear-gradient(to right, var(--accent-color), var(--red));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.todo .actions .delete {
+	color: var(--red);
+}
